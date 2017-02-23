@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "settings" : {
+    "import/resolver": "webpack"
+  },
+  "rules": {
+
+  },
+  "env" : {
+    "mocha": true
+  }
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+if ! command -v bundle > /dev/null; then
+  gem install bundler --no-document
+fi
+
+bundle install
+
+# Set up the database
+bundle exec rake db:setup
+bundle exec rake db:seed
+
+# Install node-modules
+cd frontend && npm install --save-dev
